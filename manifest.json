@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "VisualExtension",
+    "version": "1.0",
+    "description": "Aplica filtro de cor para simular diferentes tipos de daltonismo.",
+    "permissions": ["activeTab"],
+    "host_permissions": [
+      "https://www.google.com/"
+    ],
+    "action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "48": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.google.com/*", "https://www.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
